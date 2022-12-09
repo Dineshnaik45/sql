@@ -1,0 +1,20 @@
+
+SQL> 
+SQL> CREATE TABLE  STUDENT( ID NUMBER(3) PRIMARY KEY,
+  2  NAME VARCHAR(20) NOT NULL
+  3  ,CONTACT NUMBER(23) UNIQUE,
+  4  CITY VARCHAR(20) DEFAULT('PUNE'),
+  5  AGE NUMBER(20) CHECK(AGE>18)
+  6  );
+
+Table created.
+
+SQL>  INSERT INTO STUDENT VALUES(10,'DINESH',9527989714,'JAMNER',22);
+
+1 row created.
+
+SQL> SELECT * FROM STUDENT;
+
+        ID NAME                    CONTACT CITY                        AGE
+---------- -------------------- ---------- -------------------- ----------
+        10 DINESH               9527989714 JAMNER                       22
